@@ -1,13 +1,21 @@
 /*************************************************/
+
 /**	titre : TP1 EMSY Sparky linux		**/
+
 /**	auteur : Louis cardinaux		**/
+
 /**	coauteur : frédérique goyet		**/
+
 /**	date : 08.11.2024			**/
+
 /**						**/
+
 /*************************************************/
 
 /***************************/
+
 /**  Guide des commandes  **/
+
 /***************************/
 
 /*********************************************************************************/
@@ -32,15 +40,16 @@ sudo pkg-reconfigure keyboard-configuration	//lance le sousprogramme de configur
 cat /proc/sys/vm/swappiness			//retourne la valeur en pourcentage de la swap
 sudo sysctl vm.swappiness=[valeur 0-100]	//change la valeur de la swap temporairement (jusqu'au prochain démarage)
 ```
-//ex : cat /proc/sys/vm/swappiness		//retourne le pourcentage de la swap (par défaut 60%)
-//ex : sudo sysctl vm.swappiness=50		//change la valeur de la swap temporairement a 50%
+//ex : cat /proc/sys/vm/swappiness		retourne le pourcentage de la swap (par défaut 60%)
+//ex : sudo sysctl vm.swappiness=50		change la valeur de la swap temporairement a 50%
 
 /*********************************************************************************/
+
 /**   Apartenance des utilisateur   **/
 ```
 id [nom d'utilisateur]		//affiche la liste d'apartenance de l'utilisateur
 ```
-//ex : id lf			//affiche la liste d'apartenance de l'utilisateur "lf"
+//ex : id lf			affiche la liste d'apartenance de l'utilisateur "lf"
 
 /*********************************************************************************/
 
@@ -48,8 +57,8 @@ id [nom d'utilisateur]		//affiche la liste d'apartenance de l'utilisateur
 ```
 cd /[nom du répertoir]
 ```
-//ex : cd /		//se déplacer à la racine
-//ex : cd /home		//se déplacer dans le répertoire home
+//ex : cd /		se déplacer à la racine
+//ex : cd /home		se déplacer dans le répertoire home
 
 /*********************************************************************************/
 
@@ -66,8 +75,8 @@ mkdir /[répertoir existant]/[répertoir créé]
 chmod u+[droits] /[répertoire]	//change les droits utilisateur
 ls -ld /[répertoire]		//liste les droite du répertoire
 ```
-//ex : chmod u+rwx /home	//donne les droits (Read, Write, eXecute) a l'utilisateur dans le répertoire /home
-//ex : ls -ld /home		//affiche les droits relatif au répertoire /home pour l'utilisateur
+//ex : chmod u+rwx /home	donne les droits (Read, Write, eXecute) a l'utilisateur dans le répertoire /home
+//ex : ls -ld /home		affiche les droits relatif au répertoire /home pour l'utilisateur
 
 /*********************************************************************************/
 
@@ -95,21 +104,21 @@ apt-get install [nom du programme]
 nano 
 nano [nom de fichier]
 ```
-//ex : nano 		//nouveaux fichier sans nom
-//ex : nano Readme.md	//ouvre le fichier Readme.md
+//ex : nano 		nouveaux fichier sans nom
+//ex : nano Readme.md	ouvre le fichier Readme.md
 
-ctrl+g 			//Help
-ctrl+o 			//write out
-ctrl+w 			//where is
-ctrl+k 			//cut
-ctrl+t 			//execute
-ctrl+c 			//locate
-ctrl+x 			//quit
-ctrl+r 			//read file
-ctrl+\ 			//replace
-ctrl+u 			//paste
-ctrl+j 			//justify
-ctrl+_ 			//go to line
+ctrl+g 			Help
+ctrl+o 			write out
+ctrl+w 			where is
+ctrl+k 			cut
+ctrl+t 			execute
+ctrl+c 			locate
+ctrl+x 			quit
+ctrl+r 			read file
+ctrl+\ 			replace
+ctrl+u 			paste
+ctrl+j 			justify
+ctrl+_ 			go to line
 
 /**   créer un fichier   **/
 ```
