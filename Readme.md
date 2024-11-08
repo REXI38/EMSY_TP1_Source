@@ -345,7 +345,11 @@ singel file		 	//choisir "fichier unique" pour la sauvegarde  "Next"
 
 cd /				//aller a la racine
 
+```
+
 sudo sparkylinux-installer	//lancer l'installateur
+
+```
 
 yes				//Choisir "Yes" pour continuer l'installation
 
@@ -503,8 +507,11 @@ reeboot and try linux 		//redémarer et tester linux selectionner "Yes"
 /**   Changer la langue du clavier   **/
 
 
+```
 
 sudo dpkg-reconfigure keyboard-configuration	//lance le sousprogramme de configuration du clavier
+
+```
 
 keyboard model					//sélectionner "Generic 101-key PC"
 
