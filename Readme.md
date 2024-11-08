@@ -23,157 +23,303 @@
 /**   Installer sparkylinux   **/
 
 ```
+
 cd /					//aller a la racine
+
 sudo sparkylinux-installer		//lancé l'installeur
+
 ````
 
 /*********************************************************************************/
 
 /**   Changer la langue du clavier   **/
+
 ```
+
 sudo pkg-reconfigure keyboard-configuration	//lance le sousprogramme de configuration du clavier
+
 ```
+
 /*********************************************************************************/
 
 /**   Pourcentage de la swap   **/
+
 ```
+
 cat /proc/sys/vm/swappiness			//retourne la valeur en pourcentage de la swap
+
 sudo sysctl vm.swappiness=[valeur 0-100]	//change la valeur de la swap temporairement (jusqu'au prochain démarage)
+
 ```
+
 //ex : cat /proc/sys/vm/swappiness		retourne le pourcentage de la swap (par défaut 60%)
+
 //ex : sudo sysctl vm.swappiness=50		change la valeur de la swap temporairement a 50%
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Apartenance des utilisateur   **/
+
 ```
+
 id [nom d'utilisateur]		//affiche la liste d'apartenance de l'utilisateur
+
 ```
+
 //ex : id lf			affiche la liste d'apartenance de l'utilisateur "lf"
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Se déplacer dans les répertoirs   **/
+
 ```
+
 cd /[nom du répertoir]
+
 ```
+
 //ex : cd /		se déplacer à la racine
+
 //ex : cd /home		se déplacer dans le répertoire home
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Créer un répertoir   **/
+
 ```
+
 mkdir /[répertoir existant]/[répertoir créé]
+
 ```
+
 //ex : mkdir /home/EMSY_TP1_LCX_FGT
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Changer les droits   **/
+
 ```
+
 chmod u+[droits] /[répertoire]	//change les droits utilisateur
+
 ls -ld /[répertoire]		//liste les droite du répertoire
+
 ```
+
 //ex : chmod u+rwx /home	donne les droits (Read, Write, eXecute) a l'utilisateur dans le répertoire /home
+
 //ex : ls -ld /home		affiche les droits relatif au répertoire /home pour l'utilisateur
 
+
+
 /*********************************************************************************/
+
+
 
 /**   installation   **/
+
 ```
+
 apt-get install [nom du programme]
+
 ```
+
 //ex : apt-get install nano
+
 //ex : apt-get install git
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Test application installée   **/
+
 ```
+
 [nom du programme] --version	//retourne la version de l'application si elle est installée
+
 ```
+
 //ex : nano --version
+
 //ex : git --version
+
 //ex : gcc --version
+
+
 
 /*********************************************************************************/
 
+
+
 /**   commande nano   **/
+
 ```
+
 nano 
+
 nano [nom de fichier]
+
 ```
+
 //ex : nano 		nouveaux fichier sans nom
+
 //ex : nano Readme.md	ouvre le fichier Readme.md
 
+
+
 ctrl+g 			Help
+
 ctrl+o 			write out
+
 ctrl+w 			where is
+
 ctrl+k 			cut
+
 ctrl+t 			execute
+
 ctrl+c 			locate
+
 ctrl+x 			quit
+
 ctrl+r 			read file
+
 ctrl+\ 			replace
+
 ctrl+u 			paste
+
 ctrl+j 			justify
+
 ctrl+_ 			go to line
 
+
+
 /**   créer un fichier   **/
+
 ```
+
 nano 			//nouveaux fichier sans nom
+
 ```
+
 (éditer le fichier)
 
+
+
 ctrl+x 			//quitté
+
 Save modifid buffer	//voulez vou sauvgarder les modifications cliquer "Y" pour oui
+
 File name to write	//entrer le nom du fichier puis cliquer sur "entrer"
+
+
 
 (fichier créé et enregistré sous le nom donné)
 
+
+
 /**   éditer un fichier   **/
+
 ```
+
 nano Readme.md		//ouvre le fichier Readme.md
+
 ```
+
 (éditer le fichier)
 
+
+
 ctrl+x 			//quitté
+
 Save modifid buffer	//voulez vou sauvgarder les modification cliquer "Y" pour oui
+
+
 
 (fichier modifié et enregistré)
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Git commande   **/
+
 ```
+
 git clone <adresse serveur> 		//clone le dépot en local (répertoire actif) de celui a l'adresse du serveur
+
 ```
+
 //ex : git clone https://github.com/REXI38/EMSY_TP1_Source.git	//Clone le dépot dans le répertoire
+
 ```
+
 git add [nom du fichier]		//ajoute un ou plisieurs fichiers pour le commit
+
 ```
+
 //ex : git add -A			//ajoute tout les fichier (-A = --all) pour le commit
+
 ```
+
 git commit -m "votre commentaire" 	//crée un nouveau commit (-m) ajoute un message
+
 ```
+
 //ex : git commit -m "update Source"	//crée le nouveau commit avc les message "update source"
+
 ```
+
 git push 				//envoie les fichier prêt pour dans le commit
+
 ```
+
 //ex : git push 			//envoie les fichiers sur le sereur
 
+
+
 /*********************************************************************************/
 
 
 
+
+
+
+
 /*******************************/
+
 /**  Guide de l'installation  **/
+
 /*******************************/
 
+
+
 /*********************************************************************************/
+
+
 
 /**   Préparation de la VM   **/
+
 
 Create a New Virtual Machine	//créer une nouvelle VM
 
@@ -304,56 +450,33 @@ reeboot and try linux 		//redémarer et tester linux selectionner "Yes"
 /**   Image du démmarage du GRUB   **/
 
 
-
+```
  ###################################################################################
-
  ########################### GNU GRUB version 2.04-20 ##############################
-
  ###################################################################################
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@*Sparky GNU/Linux @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@ Advanced options for Sparky GNU/Linux @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-
  ###################################################################################
-
  ####### Use the ↑ and ↓ keys to select which entry is highlighted.#################
-
  ####### Press enter to boot the selected OS, `e' to edit the commands #############
-
  ####### before booting or `c' for a command-line.##################################
-
  #### The highlighted entry will be executed automatically in 5s.###################
-
  ###################################################################################
 
-
+```
 
 //les .png c'est surfait
 
