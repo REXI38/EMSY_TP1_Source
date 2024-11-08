@@ -204,6 +204,7 @@ desktop instal			//installation d'un bureau selectionner "No"
 reeboot and try linux 		//redémarer et tester linux selectionner "Yes"
 
 (fin de l'installation)
+
 /*********************************************************************************/
 
 
@@ -241,6 +242,7 @@ reeboot and try linux 		//redémarer et tester linux selectionner "Yes"
 	###################################################################################
 
 //les .png c'est surfait
+
 /*********************************************************************************/
 
 
@@ -260,4 +262,5 @@ key to function as AltGr			//sélectionner "The default for the keyboard layout"
 compose key					//sélectionner "Right alt (AltGr)"
 
 (langue du clavier changé)
+
 /*********************************************************************************/
